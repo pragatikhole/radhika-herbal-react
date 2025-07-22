@@ -3,11 +3,8 @@ import Midsection from './component_M/midsection';
 import OurCertifications from './component_M/ourcertifications';
 
 const App = () => {
-  return (
-    <>
-      {/* <Midsection /> */}
-      <OurCertifications />
-    </>
-  );
+<
+  return <h1 className="text-3xl font-bold underline">Hello world! its radhika herbal project</h1>;
 };
+ 
 export default App;
