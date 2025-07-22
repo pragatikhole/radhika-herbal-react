@@ -22,7 +22,7 @@ const steps = [
     },
 ];
 
-const Steps = () => {
+const Midsection = () => {
     return (
         <div className="flex flex-wrap gap-6 justify-center p-6 bg-[#f9f9f9]">
             {steps.map((item, index) => (
@@ -54,4 +54,4 @@ const Steps = () => {
     );
 };
 
-export default Steps;
+export default Midsection;
