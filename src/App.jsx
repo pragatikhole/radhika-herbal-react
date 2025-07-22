@@ -1,21 +1,13 @@
-import React from "react";
-import OurProducts from "./components/ourproducts"; // Capitalized import
-import ProductsGrid from "./components/ProductsGrid";
+
+
+import React from 'react';
+import Midsection from './component_M/midsection';
+import OurCertifications from './component_M/ourcertifications';
 
 const App = () => {
-  return (
-    <div className="p-6">
-      
-      <div className="bg-gray-50 min-h-screen p-4">
-  <div className="max-w-6xl mx-auto">
-    <OurProducts />
-    <ProductsGrid />
-  </div>
-</div>
+<
+  return <h1 className="text-3xl font-bold underline">Hello world! its radhika herbal project</h1>;
 
-      
-    </div>
-  );
 };
-
+ 
 export default App;
