@@ -11,14 +11,14 @@ const categories = [
   "Face Moisturizers & Lotions",
 ];
 
-export default function OurProducts() {
+export default function OurGifiting() {
   return (
-    <div className=" py-10 px-4 font-playfair text-center">
-      <div className="flex flex-wrap justify-center items-center ">
+    <div className="py-10 px-4 font-playfair text-center">
+      <div className="flex flex-wrap justify-center items-center gap-3">
         <div className="flex justify-between items-center w-full mt-4 px-24 pb-8">
           {/* Left: Heading (centered text within its space) */}
           <h2 className="text-2xl font-semibold text-gray-700 text-center flex-1">
-            Our Products
+            Our Gifting Range
           </h2>
 
           {/* Right: Search Box */}
