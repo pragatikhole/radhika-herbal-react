@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import womanImg from "../assests/woman.png";
 
@@ -16,42 +17,104 @@ import PrivateLabelling from "./PrivateLabelling";
 import CorporateGifting from "./CorporateGifting";
 
 export default function LandingPage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className=" overflow-hidden min-h-screen">
-      {/* Navbar (Common) */}
-      <nav className="bg-[#FEFEFE] text-[#666666] px-6 py-4 flex justify-between items-center shadow">
-        <div className="text-2xl font-bold">🌿</div>
-        <div className="hidden md:flex gap-20">
-          <Link to="/" className="hover:underline font-medium">
-            Home
-          </Link>
-          <Link to="/about" className="hover:underline font-medium">
-            About Us
-          </Link>
-          <Link to="/contract" className="hover:underline font-medium">
-            Contract Manufacturing
-          </Link>
-          <Link to="/private" className="hover:underline font-medium">
-            Private Labelling
-          </Link>
-          <Link to="/corporate" className="hover:underline font-medium">
-            Corporate Gifting
-          </Link>
+    <div className="overflow-hidden min-h-screen">
+      {/* Navbar (Responsive) */}
+      <nav className="bg-[#FEFEFE] text-[#666666] px-6 py-4 shadow">
+        <div className="flex justify-between items-center">
+          <div className="text-2xl font-bold">🌿</div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex gap-10 font-medium">
+            <Link to="/" className="hover:underline">
+              Home
+            </Link>
+            <Link to="/about" className="hover:underline">
+              About Us
+            </Link>
+            <Link to="/contract" className="hover:underline">
+              Contract Manufacturing
+            </Link>
+            <Link to="/private" className="hover:underline">
+              Private Labelling
+            </Link>
+            <Link to="/corporate" className="hover:underline">
+              Corporate Gifting
+            </Link>
+          </div>
+
+          {/* Right Side Icons (Desktop Only) */}
+          <div className="hidden md:flex items-center gap-4">
+            <button className="hover:underline">Sign-In</button>
+            <span>👜</span>
+          </div>
+
+          {/* Hamburger for Mobile/Tablet */}
+          <button
+            className="md:hidden text-3xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
         </div>
-        <div className="flex items-center gap-4">
-          <button className="text-[#666666] hover:underline">Sign-In</button>
-          <span>👜</span>
-        </div>
+
+        {/* Mobile Dropdown Menu */}
+        {menuOpen && (
+          <div className="md:hidden flex flex-col gap-4 mt-4 text-sm font-medium">
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+              className="hover:underline"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={() => setMenuOpen(false)}
+              className="hover:underline"
+            >
+              About Us
+            </Link>
+            <Link
+              to="/contract"
+              onClick={() => setMenuOpen(false)}
+              className="hover:underline"
+            >
+              Contract Manufacturing
+            </Link>
+            <Link
+              to="/private"
+              onClick={() => setMenuOpen(false)}
+              className="hover:underline"
+            >
+              Private Labelling
+            </Link>
+            <Link
+              to="/corporate"
+              onClick={() => setMenuOpen(false)}
+              className="hover:underline"
+            >
+              Corporate Gifting
+            </Link>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="hover:underline text-left"
+            >
+              Sign-In
+            </button>
+          </div>
+        )}
       </nav>
 
       {/* Page Content */}
       <Routes>
-        {/* HOME PAGE */}
         <Route
           path="/"
           element={
             <>
-              {/* Hero Section with Gradient Background */}
+              {/* Hero Section */}
               <div className="bg-gradient-to-b from-[#FEFEFE] to-[#e2dddd] rounded-b-3xl overflow-hidden">
                 <div className="flex flex-col md:flex-row justify-between md:px-56 pt-16 h-[300px]">
                   <div className="flex-1 flex flex-col justify-start text-center md:text-left space-y-4">
@@ -65,7 +128,7 @@ export default function LandingPage() {
                       <button className="bg-[#666666] text-white px-4 py-2 rounded font-semibold">
                         Contact Us
                       </button>
-                      <button className=" bg-white text-[#6F8675] px-4 py-2 rounded font-semibold">
+                      <button className="bg-white text-[#6F8675] px-4 py-2 rounded font-semibold">
                         View Products
                       </button>
                     </div>
@@ -81,7 +144,7 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* Other Sections: No Gradient Background */}
+              {/* Other Home Sections */}
               <OurProducts />
               <ProductsGrid />
               <OurCertifications />
@@ -93,7 +156,7 @@ export default function LandingPage() {
           }
         />
 
-        {/* OTHER PAGES */}
+        {/* Other Pages */}
         <Route path="/about" element={<About />} />
         <Route path="/contract" element={<Contract />} />
         <Route path="/private" element={<PrivateLabelling />} />
