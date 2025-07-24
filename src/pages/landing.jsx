@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import womanImg from "../assests/woman.png";
+import { FiSearch } from "react-icons/fi";
 
 // Home page components
 import OurProducts from "../components/ourproducts";
@@ -21,48 +22,63 @@ export default function LandingPage() {
 
   return (
     <div className="overflow-hidden min-h-screen">
-      {/* Navbar (Responsive) */}
-      <nav className="bg-[#FEFEFE] text-[#666666] px-6 py-4 shadow">
-        <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold">🌿</div>
+      {/* Navbar */}
+      <nav className="bg-[#FEFEFE] text-[#666666] px-4 py-4 shadow">
+        <div className="flex flex-wrap items-center justify-between max-w-[1440px] mx-auto w-full">
+          {/* Left: Logo + Nav */}
+          <div className="flex items-center gap-6 flex-1 flex-wrap">
+            <div className="text-2xl font-bold">🌿</div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex gap-10 font-medium">
-            <Link to="/" className="hover:underline">
-              Home
-            </Link>
-            <Link to="/about" className="hover:underline">
-              About Us
-            </Link>
-            <Link to="/contract" className="hover:underline">
-              Contract Manufacturing
-            </Link>
-            <Link to="/private" className="hover:underline">
-              Private Labelling
-            </Link>
-            <Link to="/corporate" className="hover:underline">
-              Corporate Gifting
-            </Link>
+            {/* Desktop Menu */}
+            <div className="hidden md:flex gap-6 font-medium">
+              <Link to="/" className="hover:underline">
+                Home
+              </Link>
+              <Link to="/about" className="hover:underline">
+                About Us
+              </Link>
+              <Link to="/contract" className="hover:underline">
+                Contract Manufacturing
+              </Link>
+              <Link to="/private" className="hover:underline">
+                Private Labelling
+              </Link>
+              <Link to="/corporate" className="hover:underline">
+                Corporate Gifting
+              </Link>
+            </div>
+
+            {/* Desktop Search */}
+            <div className="hidden md:flex ml-auto">
+              <div className="flex items-center border border-[#7E9E86] bg-white rounded-md px-3 py-1.5">
+                <FiSearch className="text-gray-400 mr-2" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="outline-none border-none text-gray-600 text-base bg-transparent"
+                />
+              </div>
+            </div>
           </div>
 
-          {/* Right Side Icons (Desktop Only) */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Right: Sign-In + Bag */}
+          <div className="hidden md:flex items-center gap-4 pl-4">
             <button className="hover:underline">Sign-In</button>
             <span>👜</span>
           </div>
 
-          {/* Hamburger for Mobile/Tablet */}
+          {/* Hamburger (Mobile) */}
           <button
-            className="md:hidden text-3xl"
+            className="md:hidden text-3xl ml-auto"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             ☰
           </button>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Menu */}
         {menuOpen && (
-          <div className="md:hidden flex flex-col gap-4 mt-4 text-sm font-medium">
+          <div className="md:hidden flex flex-col gap-4 mt-4 text-sm font-medium px-4">
             <Link
               to="/"
               onClick={() => setMenuOpen(false)}
@@ -108,7 +124,7 @@ export default function LandingPage() {
         )}
       </nav>
 
-      {/* Page Content */}
+      {/* Routes & Hero Section */}
       <Routes>
         <Route
           path="/"
@@ -116,35 +132,37 @@ export default function LandingPage() {
             <>
               {/* Hero Section */}
               <div className="bg-gradient-to-b from-[#FEFEFE] to-[#e2dddd] rounded-b-3xl overflow-hidden">
-                <div className="flex flex-col md:flex-row justify-between md:px-56 pt-16 h-[300px]">
-                  <div className="flex-1 flex flex-col justify-start text-center md:text-left space-y-4">
-                    <p className="text-[#4B6570] text-lg">
+                <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32 pt-20 h-auto md:h-[350px]">
+                  {/* Text Block */}
+                  <div className="flex-1 flex flex-col justify-start text-center md:text-left space-y-2">
+                    <p className="text-[#3D3D3D] text-sm">
                       Makeup & Skincare, Made for Your Brand.
                     </p>
-                    <h2 className="text-4xl font-bold text-[#264653] font-[Lora]">
+                    <h2 className="text-4xl md:text-6xl font-bold text-[#666666] font-[Lora]">
                       Radhika Herbals
                     </h2>
                     <div className="flex justify-center md:justify-start gap-4 mt-4">
-                      <button className="bg-[#666666] text-white px-4 py-2 rounded font-semibold">
+                      <button className="bg-[#666666] text-[#FEFEFE] px-4 py-2 rounded-[12px] font-semibold">
                         Contact Us
                       </button>
-                      <button className="bg-white text-[#6F8675] px-4 py-2 rounded font-semibold">
+                      <button className="bg-[#FFFFFF] text-[#6F8675] px-4 py-2 rounded-[12px] font-semibold">
                         View Products
                       </button>
                     </div>
                   </div>
 
-                  <div className="flex-1 flex items-end justify-center">
+                  {/* Image Block */}
+                  <div className="flex-1 flex items-end justify-center mt-6 md:mt-0">
                     <img
                       src={womanImg}
                       alt="Woman holding product"
-                      className="w-[250px] md:w-[300px] object-contain"
+                      className="w-[577px] md:w-[385px] object-contain"
                     />
                   </div>
                 </div>
               </div>
 
-              {/* Other Home Sections */}
+              {/* Home Sections */}
               <OurProducts />
               <ProductsGrid />
               <OurCertifications />
