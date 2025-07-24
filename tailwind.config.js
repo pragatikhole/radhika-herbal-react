@@ -1,12 +1,17 @@
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
+
 import lineClamp from "@tailwindcss/line-clamp";
 
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       fontFamily: {
+
+        playfair: ['"Playfair Display"', "serif"],
+      },
+      colors: {
+        herbal: "#f7941e",
+
 
         lora: ['Lora', 'serif'],
         mulish: ['Mulish', 'sans-serif'],
@@ -23,6 +28,7 @@ export default {
         light: "#FEFEFE",
         "custom-pink": "#FFC7FD",
         "light-green": "#E3F2E1",
+
 
       },
     },
