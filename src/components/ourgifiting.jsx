@@ -19,7 +19,7 @@ export default function OurProducts() {
         <div className="w-full relative mb-6 flex flex-col md:flex-row md:items-center">
           {/* Heading centered */}
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 w-full text-center md:absolute md:left-1/2 md:-translate-x-1/2">
-            Our Products
+            Our Gifting Range
           </h2>
 
           {/* Search on right */}

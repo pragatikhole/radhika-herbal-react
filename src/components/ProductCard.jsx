@@ -1,5 +1,4 @@
-import React from "react";
-import product1 from "../assets/product1.png"; // adjust path if needed
+import product1 from "../assests/product1.png"; // adjust path if needed
 
 const ProductCard = ({ selected = false }) => {
   return (
@@ -9,16 +8,15 @@ const ProductCard = ({ selected = false }) => {
       }`}
     >
       <div className="relative flex justify-center w-full h-[240px]">
-  <span className="absolute top-2 right-2 z-10 bg-[#cad2bd] text-xs text-white px-2 py-1 rounded-tl-md rounded-br-md">
-    Minimum Order: 3 units
-  </span>
-  <img
-    src={product1}
-    alt="Facewash"
-    className="w-full h-full object-contain z-0"
-  />
-</div>
-
+        <span className="absolute top-2 right-2 z-10 bg-[#cad2bd] text-xs text-white px-2 py-1 rounded-tl-md rounded-br-md">
+          Minimum Order: 3 units
+        </span>
+        <img
+          src={product1}
+          alt="Facewash"
+          className="w-full h-full object-contain z-0"
+        />
+      </div>
 
       <h3 className="text-green-900 font-semibold mt-4 text-sm">
         Sulphate Free Facewash
