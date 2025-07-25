@@ -9,6 +9,7 @@ const PrivateLabelling = () => {
   return (
     <div>
       <PagePrivate />
+
       <Midsection />
       <OurProducts />
       <ProductsGrid />
