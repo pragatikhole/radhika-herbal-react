@@ -9,6 +9,7 @@ const Contract = () => {
   return (
     <div>
       <PageContract />
+
       <Midsection />
       <OurProducts />
       <ProductsGrid />
