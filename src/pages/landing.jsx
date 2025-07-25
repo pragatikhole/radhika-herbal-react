@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import { Routes, Route, Link } from "react-router-dom";
 import womanImg from "../assests/woman.png";
 import { FiSearch } from "react-icons/fi";
@@ -20,6 +23,17 @@ import CorporateGifting from "./CorporateGifting";
 
 export default function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const enquiryRef = useRef(null);
+  const productsRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#enquiry") {
+      enquiryRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else if (location.hash === "#products") {
+      productsRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   return (
     <div className="overflow-hidden min-h-screen">
@@ -132,23 +146,27 @@ export default function LandingPage() {
           element={
             <>
               {/* Hero Section */}
-              <div className="bg-gradient-to-b from-[#FEFEFE] to-[#e2dddd] rounded-b-3xl overflow-hidden">
+              <div className="bg-gradient-to-b from-light to-olive rounded-b-3xl overflow-hidden">
                 <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32 pt-20 h-auto md:h-[350px]">
                   {/* Text Block */}
                   <div className="flex-1 flex flex-col justify-start text-center md:text-left space-y-2">
-                    <p className="text-[#3D3D3D] text-sm">
+                    <p className="text-[#3D3D3D] text-[#28] font-light pb-[#24]">
                       Makeup & Skincare, Made for Your Brand.
                     </p>
-                    <h2 className="text-4xl md:text-6xl font-bold text-[#666666] font-[Lora]">
+                    <h2 className="text-[#72] md:text-6xl font-bold text-[#666666] font-[Lora] pb-8">
                       Radhika Herbals
                     </h2>
                     <div className="flex justify-center md:justify-start gap-4 mt-4">
-                      <button className="bg-[#666666] text-[#FEFEFE] px-4 py-2 rounded-[12px] font-semibold">
-                        Contact Us
-                      </button>
-                      <button className="bg-[#FFFFFF] text-[#6F8675] px-4 py-2 rounded-[12px] font-semibold">
-                        View Products
-                      </button>
+                      <Link to="/#enquiry">
+                        <button className=" bg-olive-dark text-white px-4 py-2 rounded-[12px] font-semibold">
+                          Contact Us
+                        </button>
+                      </Link>
+                      <Link to="/#products">
+                        <button className="bg-[#FFFFFF] text-[#6F8675] px-4 py-2 rounded-[12px] font-semibold">
+                          View Products
+                        </button>
+                      </Link>
                     </div>
                   </div>
 
@@ -157,7 +175,7 @@ export default function LandingPage() {
                     <img
                       src={womanImg}
                       alt="Woman holding product"
-                      className="w-[577px] md:w-[385px] object-contain"
+                      className="w-[677px] md:w-[430px] "
                     />
                   </div>
                 </div>
@@ -165,13 +183,17 @@ export default function LandingPage() {
 
               {/* Home Sections */}
               <OurServices />
-              <OurProducts />
-              <ProductsGrid />
+              <div ref={productsRef}>
+                <OurProducts />
+                <ProductsGrid />
+              </div>
               <OurCertifications />
               <OurGifiting />
               <ProductsGrid />
               <BlogSection />
-              <EnquiryForm />
+              <div ref={enquiryRef}>
+                <EnquiryForm />
+              </div>
             </>
           }
         />
