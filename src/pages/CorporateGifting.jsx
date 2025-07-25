@@ -9,6 +9,7 @@ const CorporateGifting = () => {
   return (
     <div>
       <PageCorporate />
+
       <Midsection />
       <OurProducts />
       <ProductsGrid />
