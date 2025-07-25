@@ -37,35 +37,32 @@ const blogPosts = [
 
 export default function BlogSection() {
   return (
-    <section className="bg-white mx-auto py-12">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="text-left mb-12">
+    <section className="bg-white py-12">
+      <div className="max-w-[1440px] w-full mx-auto px-4 md:px-8">
+        <div className="text-center mb-12">
           <h2
-            className="text-2xl text-gray-900 mb-4 text-center"
-            style={{
-              color: "#666666",
-              fontFamily: "Lora",
-            }}
+            className="text-2xl text-[#666666] font-bold"
+            style={{ fontFamily: "Lora" }}
           >
             Why Brands Trust Our Manufacturing Expertise
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 border border-[#A9B6A2]"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 border border-[#A9B6A2] flex flex-col"
             >
               <div className="px-6 pt-6">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-[180px] object-cover rounded-lg"
                 />
               </div>
 
-              <div className="p-6 text-left">
+              <div className="p-6 flex flex-col flex-grow">
                 <div
                   className="text-sm text-gray-500 mb-3"
                   style={{ fontFamily: "Open Sans", fontSize: "16px" }}
@@ -74,7 +71,7 @@ export default function BlogSection() {
                 </div>
 
                 <h3
-                  className="mb-3 leading-tight hover:text-blue-600 transition"
+                  className="mb-3 leading-tight"
                   style={{
                     color: "#264653",
                     fontFamily: "Lora",
@@ -86,26 +83,23 @@ export default function BlogSection() {
                 </h3>
 
                 <p
-                  className="mb-4 line-clamp-3"
-                  style={{
-                    color: "#4B6570",
-                    fontSize: "16px",
-                    fontFamily: "Mulish",
-                    lineHeight: "1.5",
-                  }}
+                  className="mb-4 text-[#4B6570] text-[16px] leading-relaxed"
+                  style={{ fontFamily: "Mulish" }}
                 >
                   {post.description}
                 </p>
 
-                <button
-                  className="group inline-flex items-center font-semibold text-white transition rounded-lg px-4 py-2 w-full justify-center"
-                  style={{
-                    backgroundColor: "#A9B6A2",
-                    border: "2px solid #A9B6A2",
-                  }}
-                >
-                  Read More<span className="ml-2">→</span>
-                </button>
+                <div className="mt-auto text-center">
+                  <button
+                    className="group inline-flex items-center font-semibold text-white px-4 py-2 rounded-[8px] transition"
+                    style={{
+                      backgroundColor: "#A9B6A2",
+                      border: "2px solid #A9B6A2",
+                    }}
+                  >
+                    Read More<span className="ml-2">→</span>
+                  </button>
+                </div>
               </div>
             </article>
           ))}
