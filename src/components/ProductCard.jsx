@@ -1,4 +1,5 @@
 import product1 from "../assests/product1.png"; // adjust path if needed
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ selected = false }) => {
   return (
@@ -42,9 +43,11 @@ const ProductCard = ({ selected = false }) => {
         </button>
       </div>
 
-      <button className="bg-[#7E9E86] text-white rounded-[16px] text-sm mt-4 px-3 py-2 w-full">
-        Request Quote
-      </button>
+      <Link to="/#enquiry">
+        <button className="bg-[#7E9E86] text-white rounded-[16px] text-sm mt-4 px-3 py-2 w-full">
+          Request Quote
+        </button>
+      </Link>
     </div>
   );
 };
