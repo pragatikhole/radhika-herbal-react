@@ -146,19 +146,19 @@ export default function LandingPage() {
           element={
             <>
               {/* Hero Section */}
-              <div className="bg-gradient-to-b from-[#FEFEFE] to-[#e2dddd] rounded-b-3xl overflow-hidden">
+              <div className="bg-gradient-to-b from-light to-olive rounded-b-3xl overflow-hidden">
                 <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32 pt-20 h-auto md:h-[350px]">
                   {/* Text Block */}
                   <div className="flex-1 flex flex-col justify-start text-center md:text-left space-y-2">
-                    <p className="text-[#3D3D3D] text-[#28] font-light">
+                    <p className="text-[#3D3D3D] text-[#28] font-light pb-[#24]">
                       Makeup & Skincare, Made for Your Brand.
                     </p>
-                    <h2 className="text-[#72] md:text-6xl font-bold text-[#666666] font-[Lora] pb-4">
+                    <h2 className="text-[#72] md:text-6xl font-bold text-[#666666] font-[Lora] pb-8">
                       Radhika Herbals
                     </h2>
                     <div className="flex justify-center md:justify-start gap-4 mt-4">
                       <Link to="/#enquiry">
-                        <button className="bg-[#666666] text-[#FEFEFE] px-4 py-2 rounded-[12px] font-semibold">
+                        <button className=" bg-olive-dark text-white px-4 py-2 rounded-[12px] font-semibold">
                           Contact Us
                         </button>
                       </Link>
@@ -175,7 +175,7 @@ export default function LandingPage() {
                     <img
                       src={womanImg}
                       alt="Woman holding product"
-                      className="w-[800px] md:w-[430px] "
+                      className="w-[677px] md:w-[430px] "
                     />
                   </div>
                 </div>
