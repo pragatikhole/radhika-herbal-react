@@ -24,19 +24,20 @@ const OurCertifications = () => {
 
   return (
     <div className="w-full py-10 bg-white overflow-hidden">
-      {/* Section Title */}
-      <div className="w-full max-w-[1200px] px-4 mx-auto text-center">
-        <h2
-          className="text-[28px]  text-gray-700 text-center"
-          style={{ fontFamily: "Lora" }}
-        >
-          Our Certification
-        </h2>
-      </div>
+      {/* Section Container with Same Padding */}
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
+        {/* Section Title */}
+        <div className="text-center mb-8">
+          <h2
+            className="text-[28px] text-gray-700"
+            style={{ fontFamily: "Lora" }}
+          >
+            Our Certification
+          </h2>
+        </div>
 
-      {/* Scrolling Images */}
-      <div className="w-full flex justify-center overflow-hidden">
-        <div className="w-full max-w-[1200px] px-4 overflow-hidden">
+        {/* Scrolling Images */}
+        <div className="overflow-hidden">
           <div className="flex gap-6 justify-center animate-scroll">
             {loopImages.map((cert, index) => (
               <img
