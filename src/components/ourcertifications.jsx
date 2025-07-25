@@ -26,9 +26,12 @@ const OurCertifications = () => {
     <div className="w-full py-10 bg-white overflow-hidden">
       {/* Section Title */}
       <div className="w-full max-w-[1200px] px-4 mx-auto text-center">
-        <p className="text-[28px] font-medium text-black font-[Lora] mb-8">
-          Our Certifications
-        </p>
+        <h2
+          className="text-[28px]  text-gray-700 text-center"
+          style={{ fontFamily: "Lora" }}
+        >
+          Our Certification
+        </h2>
       </div>
 
       {/* Scrolling Images */}

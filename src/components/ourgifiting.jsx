@@ -24,7 +24,12 @@ export default function OurProducts() {
     <div className="py-6 font-playfair">
       <div className="relative px-4 sm:px-6 md:px-10 mb-6">
         {/* Centered H2 */}
-        <h2 className="text-[28px] text-gray-700 text-center">Our Gifiting</h2>
+        <h2
+          className="text-[28px] text-gray-700 text-center"
+          style={{ fontFamily: "Lora" }}
+        >
+          Our Gifiting
+        </h2>
 
         {/* Dropdown aligned right using absolute */}
         <div className="absolute right-40 top-1/2 -translate-y-1/2">

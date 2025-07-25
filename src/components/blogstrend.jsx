@@ -41,7 +41,7 @@ export default function BlogSection() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
         <div className="text-center mb-12">
           <h2
-            className="text-xl text-[#666666] font-bold"
+            className="text-[28px]  text-gray-700 text-center"
             style={{ fontFamily: "Lora" }}
           >
             Why Brands Trust Our Manufacturing Expertise

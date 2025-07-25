@@ -4,13 +4,12 @@ import EnquiryForm from "../components/EnquiryForm";
 import PageContract from "./pageContract";
 import OurProducts from "../components/ourproducts";
 import ProductsGrid from "../components/ProductsGrid";
-import OurServices from "../components/ourservices";
 
 const Contract = () => {
   return (
     <div>
       <PageContract />
-      <OurServices />
+
       <Midsection />
       <OurProducts />
       <ProductsGrid />

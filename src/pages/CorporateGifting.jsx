@@ -4,13 +4,12 @@ import EnquiryForm from "../components/EnquiryForm";
 import PageCorporate from "./PageCorporate";
 import OurProducts from "../components/ourproducts";
 import ProductsGrid from "../components/ProductsGrid";
-import OurServices from "../components/ourservices";
 
 const CorporateGifting = () => {
   return (
     <div>
       <PageCorporate />
-      <OurServices />
+
       <Midsection />
       <OurProducts />
       <ProductsGrid />

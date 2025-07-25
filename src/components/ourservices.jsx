@@ -9,7 +9,10 @@ export default function OurServices() {
   return (
     <div className="py-16 bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
-        <h2 className="text-center text-gray-700 text-[32px] font-semibold mb-10 font-playfair">
+        <h2
+          className="text-[28px]  text-gray-700 text-center"
+          style={{ fontFamily: "Lora" }}
+        >
           Our Services
         </h2>
 

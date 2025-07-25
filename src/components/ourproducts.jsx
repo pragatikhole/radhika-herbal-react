@@ -22,7 +22,10 @@ export default function OurProducts() {
   return (
     <div className="py-6 font-playfair">
       <div className="relative px-8 mb-6">
-        <h2 className="text-[28px] font-semibold text-gray-700 text-center">
+        <h2
+          className="text-[28px]  text-gray-700 text-center"
+          style={{ fontFamily: "Lora" }}
+        >
           Our Products
         </h2>
 

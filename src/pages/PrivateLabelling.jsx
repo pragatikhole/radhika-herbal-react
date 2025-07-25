@@ -4,13 +4,12 @@ import EnquiryForm from "../components/EnquiryForm";
 import PagePrivate from "./PagePrivate";
 import OurProducts from "../components/ourproducts";
 import ProductsGrid from "../components/ProductsGrid";
-import OurServices from "../components/ourservices";
 
 const PrivateLabelling = () => {
   return (
     <div>
       <PagePrivate />
-      <OurServices />
+
       <Midsection />
       <OurProducts />
       <ProductsGrid />
