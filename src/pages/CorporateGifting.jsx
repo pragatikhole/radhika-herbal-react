@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import Midsection from "../components/midsection";
 import BlogSection from "../components/blogstrend";
 import EnquiryForm from "../components/EnquiryForm";
@@ -6,14 +8,31 @@ import OurProducts from "../components/ourproducts";
 import ProductsGrid from "../components/ProductsGrid";
 
 const CorporateGifting = () => {
+  const enquiryRef = useRef(null);
+  const productRef = useRef(null);
+
   return (
     <div>
-      <PageCorporate />
+      <PageCorporate
+        scrollToEnquiry={() =>
+          enquiryRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
+        scrollToProduct={() =>
+          productRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
+      />
 
       <Midsection />
-      <OurProducts />
-      <ProductsGrid />
-      <EnquiryForm />
+
+      <div ref={productRef}>
+        <OurProducts />
+        <ProductsGrid />
+      </div>
+
+      <div ref={enquiryRef}>
+        <EnquiryForm />
+      </div>
+
       <BlogSection />
     </div>
   );
