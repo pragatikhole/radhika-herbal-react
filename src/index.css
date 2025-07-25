@@ -51,3 +51,9 @@
     max-width: 90%;
   }
 }
+@media (max-width: 1400px) and (min-width: 1000px) {
+  .custom-no-wrap {
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+  }
+}
