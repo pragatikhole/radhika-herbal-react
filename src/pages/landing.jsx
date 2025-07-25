@@ -10,6 +10,7 @@ import OurCertifications from "../components/ourcertifications";
 import BlogSection from "../components/blogstrend";
 import EnquiryForm from "../components/EnquiryForm";
 import OurGifiting from "../components/ourgifiting";
+import OurServices from "../components/ourservices";
 
 // Other pages
 import About from "./About";
@@ -163,6 +164,7 @@ export default function LandingPage() {
               </div>
 
               {/* Home Sections */}
+              <OurServices />
               <OurProducts />
               <ProductsGrid />
               <OurCertifications />

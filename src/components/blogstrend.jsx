@@ -38,10 +38,10 @@ const blogPosts = [
 export default function BlogSection() {
   return (
     <section className="bg-white py-12">
-      <div className="max-w-[1440px] w-full mx-auto px-4 md:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
         <div className="text-center mb-12">
           <h2
-            className="text-2xl text-[#666666] font-bold"
+            className="text-xl text-[#666666] font-bold"
             style={{ fontFamily: "Lora" }}
           >
             Why Brands Trust Our Manufacturing Expertise
@@ -58,14 +58,14 @@ export default function BlogSection() {
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-[180px] object-cover rounded-lg"
+                  className="w-full h-[200px] object-cover rounded-lg"
                 />
               </div>
 
               <div className="p-6 flex flex-col flex-grow">
                 <div
                   className="text-sm text-gray-500 mb-3"
-                  style={{ fontFamily: "Open Sans", fontSize: "16px" }}
+                  style={{ fontFamily: "Open Sans", fontSize: "14px" }}
                 >
                   {post.date}
                 </div>
@@ -75,7 +75,7 @@ export default function BlogSection() {
                   style={{
                     color: "#264653",
                     fontFamily: "Lora",
-                    fontSize: "24px",
+                    fontSize: "20px",
                     fontWeight: "bold",
                   }}
                 >
@@ -91,7 +91,7 @@ export default function BlogSection() {
 
                 <div className="mt-auto text-center">
                   <button
-                    className="group inline-flex items-center font-semibold text-white px-4 py-2 rounded-[8px] transition"
+                    className="group inline-flex items-center font-semibold text-white px-14 py-2 rounded-[8px] transition"
                     style={{
                       backgroundColor: "#A9B6A2",
                       border: "2px solid #A9B6A2",
