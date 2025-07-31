@@ -22,7 +22,7 @@ export default function OurServices() {
           {services.map((lines, index) => (
             <div
               key={index}
-              className="border border-[#7E9E86] text-[#7E9E86] rounded-[12px] w-[290px] sm:w-[270px] h-[150px] flex items-center justify-center text-[22px] font-semibold text-center leading-snug px-6 py-5"
+              className="border border-[#7E9E86] text-[#7E9E86] rounded-[12px] w-[290px] sm:w-[270px] h-[130px] flex items-center justify-center text-[22px] font-semibold text-center leading-snug px-6 py-2"
               style={{ fontFamily: "Lora" }}
             >
               <div>
