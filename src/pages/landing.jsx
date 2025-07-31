@@ -175,7 +175,7 @@ export default function LandingPage() {
                     <img
                       src={womanImg}
                       alt="Woman holding product"
-                      className="w-[677px] md:w-[430px] "
+                      className="w-[677px] md:w-[460px] ml-44"
                     />
                   </div>
                 </div>
