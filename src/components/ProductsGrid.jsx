@@ -3,7 +3,7 @@ import product1 from "../assests/product1.png"; // Adjust the path if needed
 const ProductCard = ({ selected = false }) => {
   return (
     <div
-      className={`border rounded-xl p-4 shadow-sm w-auto h-[470px] cursor-pointer transform transition-transform duration-300
+      className={`border rounded-xl p-2 shadow-sm w-auto h-[470px] cursor-pointer transform transition-transform duration-300
         hover:scale-105 hover:border-[#7E9E86]
         ${selected ? "border-[#7E9E86]" : "border-gray-300"}`}
     >
