@@ -1,39 +1,56 @@
+// src/components/OurServices.js
+
 import React from "react";
 
-export default function OurServices() {
-  const services = [
-    ["Contract", "Manufacturing"],
-    ["Private Labelling"],
-    ["Corporate Gifting"],
-    ["Product Sampling"],
-  ];
+const services = [
+  {
+    title: "Contract Manufacturing",
+    image:
+      "https://img.freepik.com/free-photo/workers-assembly-line-factory_23-2149343602.jpg",
+  },
+  {
+    title: "Corporate Gifting",
+    image:
+      "https://img.freepik.com/free-photo/woman-looking-cosmetic-box_23-2149395257.jpg",
+  },
+  {
+    title: "Private Labelling",
+    image:
+      "https://img.freepik.com/free-photo/cosmetic-packaging-set_23-2148430177.jpg",
+  },
+  {
+    title: "Product Samples",
+    image:
+      "https://img.freepik.com/free-photo/dropper-bottle-cosmetic-mockup_23-2148824993.jpg",
+  },
+];
 
+const OurServices = () => {
   return (
-    <div className="py-16 bg-white">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
-        <h2
-          className="text-[28px] text-gray-700 text-center mb-12"
-          style={{ fontFamily: "Lora" }}
-        >
-          Our Services
-        </h2>
-
-        <div className="flex flex-wrap justify-center gap-8">
-          {services.map((lines, index) => (
-            <div
-              key={index}
-              className="border border-[#7E9E86] text-[#7E9E86] rounded-[12px] w-[290px] sm:w-[270px] h-[130px] flex items-center justify-center text-[22px] font-semibold text-center leading-snug px-6 py-2"
-              style={{ fontFamily: "Lora" }}
-            >
-              <div>
-                {lines.map((line, i) => (
-                  <div key={i}>{line}</div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="py-4 ">
+      <h2
+        className="text-[28px] text-gray-700 text-center p-10"
+        style={{ fontFamily: "Lora" }}
+      >
+        Our Services
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto ">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center  transform transition-transform duration-300  hover:scale-105 hover:border-[#7E9E86]"
+          >
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full rounded-2xl p-2 h-48 object-cover"
+            />
+            <p className="py-4 text-gray-600 font-medium">{service.title}</p>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default OurServices;
