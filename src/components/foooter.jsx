@@ -61,8 +61,8 @@ export default function Footer() {
               Head Office
             </h4>
             <span className="block max-w-[300px] text-[14px] leading-[22px] opacity-75">
-              Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22,
-              Charlottesville, CA 45565
+              Factory: Gat No.218, / 8, Mumbai-Agra Highway At post: Jaulke
+              Dindori, Tal: Dindori, Dist:, Nashik, Maharashtra 422206
             </span>
           </div>
           <div>

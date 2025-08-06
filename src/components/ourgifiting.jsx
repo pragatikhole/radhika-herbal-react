@@ -21,8 +21,8 @@ export default function OurProducts() {
   };
 
   return (
-    <div className=" font-playfair">
-      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32 pt-8">
+    <div className=" font-playfair pt-8">
+      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
         {/* Centered H2 */}
 
         <div className=" lg:mb-8">

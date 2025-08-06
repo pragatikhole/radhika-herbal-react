@@ -95,7 +95,7 @@ export default function ManufacturingProcess() {
                 </p>
 
                 {/* Step Description */}
-                <p className="text-[16px] font-[Mulish] text-[#4d4d4d] leading-[1.2em] h-[36px] overflow-hidden">
+                <p className="text-[16px] font-[Mulish] text-[#4d4d4d] leading-[1.2em] h-[44px] overflow-hidden">
                   {item.description}
                 </p>
               </div>
