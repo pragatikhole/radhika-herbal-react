@@ -8,7 +8,7 @@ const ProductCard = ({ selected = false }) => {
         ${selected ? "border-[#7E9E86]" : "border-gray-300"}`}
     >
       <div className="relative flex justify-center w-full h-[220px]">
-        <span className="absolute top-2 right-2 z-10 bg-[#A9B6A2] text-xs text-white px-2 py-1 rounded-tl-md rounded-br-md">
+        <span className="absolute top-2 right-2 z-10 bg-[#A9B6A2] text-xs text-white rounded-tl-md rounded-br-md">
           Minimum Order: 3 units
         </span>
         <img
@@ -51,7 +51,7 @@ const ProductCard = ({ selected = false }) => {
 
 const ProductsGrid = () => {
   return (
-    <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32 pb-16">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {Array.from({ length: 8 }).map((_, index) => (
           <ProductCard key={index} selected={index === 2} />

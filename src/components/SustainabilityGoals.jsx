@@ -2,10 +2,13 @@ import video1 from "../assests/video.mp4";
 
 const SustainabilityGoals = () => {
   return (
-    <section className="py-16 ">
+    <section>
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
-        <div className="text-left mb-12 lg:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-gray-800 mb-8">
+        <div className="text-left lg:mb-8">
+          <h2
+            className="text-[28px] text-gray-700 text-left pt-8"
+            style={{ fontFamily: "Lora" }}
+          >
             Our goals towards Sustainability
           </h2>
         </div>

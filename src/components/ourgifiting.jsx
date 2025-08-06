@@ -21,15 +21,18 @@ export default function OurProducts() {
   };
 
   return (
-    <div className="py-6 font-playfair">
-      <div className="relative px-4 sm:px-6 md:px-10 mb-6">
+    <div className=" font-playfair">
+      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32 pt-8">
         {/* Centered H2 */}
-        <h2
-          className="text-[28px] text-gray-700 text-center"
-          style={{ fontFamily: "Lora" }}
-        >
-          Our Gifting
-        </h2>
+
+        <div className=" lg:mb-8">
+          <h2
+            className="text-[28px] text-gray-700 text-left"
+            style={{ fontFamily: "Lora" }}
+          >
+            Our Gifting
+          </h2>
+        </div>
 
         {/* Dropdown aligned right using absolute */}
         <div className="absolute right-40 top-0 mt-2">
@@ -56,7 +59,6 @@ export default function OurProducts() {
             )}
           </div>
         </div>
-
       </div>
     </div>
   );
