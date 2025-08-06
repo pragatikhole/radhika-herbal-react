@@ -1,37 +1,55 @@
-export default function OurServices() {
-  const services = [
-    ["Contract", "Manufacturing"],
-    ["Private Labelling"],
-    ["Corporate Gifting"],
-    ["Product Sampling"],
-  ];
+// src/components/OurServices.js
 
+import ourService1 from "../assests/ourService1.png"; // ✅ Import your local image
+import ourService2 from "../assests/ourService2.png";
+import ourService3 from "../assests/ourService3.png"; // ✅ Import your local image
+import ourService4 from "../assests/ourService4.png";
+
+const services = [
+  {
+    title: "Contract Manufacturing",
+    image: ourService1, // ✅ Use local image here
+  },
+  {
+    title: "Corporate Gifting",
+    image: ourService4, // ✅ Use local image here
+  },
+  {
+    title: "Private Labelling",
+    image: ourService2, // ✅ Use local image here
+  },
+  {
+    title: "Product Samples",
+    image: ourService3, // ✅ Use local image here
+  },
+];
+
+const OurServices = () => {
   return (
-    <div className="py-16 bg-white">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
-        <h2
-          className="text-[28px] text-gray-700 text-center mb-12"
-          style={{ fontFamily: "Lora" }}
-        >
-          Our Services
-        </h2>
-
-        <div className="flex flex-wrap justify-center gap-8">
-          {services.map((lines, index) => (
-            <div
-              key={index}
-              className="border border-[#7E9E86] text-[#7E9E86] rounded-[12px] w-[290px] sm:w-[270px] h-[130px] flex items-center justify-center text-[22px] font-semibold text-center leading-snug px-6 py-2"
-              style={{ fontFamily: "Lora" }}
-            >
-              <div>
-                {lines.map((line, i) => (
-                  <div key={i}>{line}</div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="py-4">
+      <h2
+        className="text-[28px] text-gray-700 text-center p-10"
+        style={{ fontFamily: "Lora" }}
+      >
+        Our Services
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center transform transition-transform duration-300 hover:scale-105 hover:border-[#7E9E86]"
+          >
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full rounded-2xl p-2 h-48 object-cover"
+            />
+            <p className="py-4 text-gray-600 font-medium">{service.title}</p>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default OurServices;
