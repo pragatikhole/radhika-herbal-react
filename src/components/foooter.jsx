@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         {/* Head Office & Newsletter */}
-        <div className="border-b border-white/25 pb-5">
+        <div className=" pb-5">
           <div className="mb-5">
             <h4 className="font-raleway text-[16px] leading-[28px] mb-2">
               Head Office
