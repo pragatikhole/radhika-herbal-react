@@ -18,6 +18,7 @@ import CustomerTestimonials from "../components/CustomerTestimonials";
 import ChooseHerbalBeauty from "../components/ChooseHerbalBeauty";
 import SustainabilityGoals from "../components/SustainabilityGoals";
 import Footer from "../components/foooter";
+import GiftingCard from "../components/giftingcard";
 
 // Other pages
 import About from "./About";
@@ -219,7 +220,7 @@ export default function LandingPage() {
               <ChooseHerbalBeauty />
               <SustainabilityGoals />
               <OurGifiting />
-              <ProductsGrid />
+              <GiftingCard />
               <div ref={enquiryRef}>
                 <EnquiryForm />
               </div>

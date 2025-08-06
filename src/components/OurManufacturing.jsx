@@ -37,10 +37,11 @@ export default function ManufacturingProcess() {
   ];
 
   const loopSteps = [...steps, ...steps];
+  // const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <div className="flex justify-center">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32 lg:px-32">
+    <div className="flex justify-center ">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-32">
         {/* Heading Section */}
         <div className="flex justify-between items-center">
           <div className="flex flex-col justify-center pt-8">
@@ -59,17 +60,17 @@ export default function ManufacturingProcess() {
           </div>
 
           {/* Arrow Icon */}
-          <div className="flex items-center h-[130px]">
+          <div className="flex items-center h-[160px]">
             <img
               src="https://static.thenounproject.com/png/541089-200.png"
               alt="Right Arrow"
-              className="w-[120px] h-[140px] object-contain mt-14"
+              className="w-[140px] h-[160px] object-contain mt-14"
             />
           </div>
         </div>
 
-        {/* Steps Section */}
-        <div className="relative overflow-hidden">
+        {/* Steps Section with Horizontal Padding */}
+        <div className="relative overflow-hidden px-4 md:px-8">
           <div className="flex gap-4 animate-marquee hover:[animation-play-state:paused]">
             {loopSteps.map((item, index) => (
               <div
@@ -90,12 +91,12 @@ export default function ManufacturingProcess() {
                   {item.step}
                 </p>
 
-                <p className="text-[20px] font-[Lora] text-black leading-[1.3em] line-clamp-2">
+                <p className="text-[20px] font-[Lora] text-black leading-[1.3em] line-clamp-2 h-[80px]">
                   {item.title}
                 </p>
 
                 {/* Step Description */}
-                <p className="text-[16px] font-[Mulish] text-[#4d4d4d] leading-[1.2em] h-[44px] overflow-hidden">
+                <p className="text-[16px] font-[Mulish] text-[#4d4d4d] leading-[1.2em] h-[110px] overflow-hidden">
                   {item.description}
                 </p>
               </div>
