@@ -1,6 +1,5 @@
 // src/components/OurServices.js
 
-import React from "react";
 import ourService1 from "../assests/ourService1.png"; // ✅ Import your local image
 import ourService2 from "../assests/ourService2.png";
 import ourService3 from "../assests/ourService3.png"; // ✅ Import your local image

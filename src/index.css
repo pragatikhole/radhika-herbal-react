@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Mulish:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Mulish:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -62,4 +62,32 @@
     flex-wrap: nowrap !important;
     justify-content: center !important;
   }
+}
+
+/* Default: Side slides (hide image, peek background) */
+.carousel-image {
+  /* transform: scale(0.85); */
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+/* Hide all images by default */
+.carousel-img {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+/* Center image: fully visible */
+.slick-center .carousel-img {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Center slide is larger and on top */
+.slick-center .carousel-image {
+  transform: scale(1);
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
