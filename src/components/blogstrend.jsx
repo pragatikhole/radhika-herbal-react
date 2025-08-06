@@ -37,11 +37,11 @@ const blogPosts = [
 
 export default function BlogSection() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
-        <div className="text-center mb-12">
+        <div className=" lg:mb-8">
           <h2
-            className="text-[28px]  text-gray-700 text-center"
+            className="text-[28px]  text-gray-700 text-left pt-8"
             style={{ fontFamily: "Lora" }}
           >
             Why Brands Trust Our Manufacturing Expertise

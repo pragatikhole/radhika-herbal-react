@@ -9,7 +9,7 @@ export default function ChooseHerbalBeauty() {
       title: "Gentle on Skin",
       description:
         "Herbal formulations use plant-based ingredients that are less likely to irritate or cause allergies—perfect for sensitive skin.",
-      image: Image4, // Your uploaded image
+      image: Image4,
     },
     {
       title: "No Harsh Chemicals",
@@ -26,48 +26,51 @@ export default function ChooseHerbalBeauty() {
   ];
 
   return (
-    <section className="py-16 ">
+    <section>
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 xl:px-24 2xl:px-32">
-        <div className="text-left mb-12 lg:mb-16">
-          <h2 className="text-[#32] md:text-3xl lg:text-4xl font-serif text-gray-800 mb-8">
+        {/* Heading */}
+        <div className="text-center lg:mb-8">
+          <h2
+            className="text-[28px] text-gray-700 text-left pt-8"
+            style={{ fontFamily: "Lora" }}
+          >
             Why Choose Herbal Beauty
           </h2>
         </div>
 
-        {/* Cards Wrapper with MORE space on top */}
-        <div className="relative overflow-hidden mt-6">
-          <div className="flex gap-6">
-            {steps.map((item, index) => (
-              <div
-                key={index}
-                className="w-[384px] h-[364px] bg-white rounded-[10px] px-[12px] py-[16px] flex-shrink-0 flex flex-col justify-start gap-[20px] z-10"
-              >
-                {/* Image Box */}
-                <div className="w-full h-[163px] rounded-[10px] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Step Label */}
-                <p className="text-[18px] font-[Lora] text-black leading-[1.2em]">
-                  {item.step}
-                </p>
-
-                {/* Step Title */}
-                <p className="text-[24px] font-[Lora] text-black leading-[1.3em] line-clamp-2">
-                  {item.title}
-                </p>
-
-                {/* Step Description */}
-                <p className="text-[16px] font-[Mulish] text-black leading-[1.2em] h-[36px] overflow-hidden">
-                  {item.description}
-                </p>
+        {/* Cards */}
+        <div className="flex flex-wrap justify-center gap-6">
+          {steps.map((item, index) => (
+            <div
+              key={index}
+              className="w-[370px] h-[100%] bg-white rounded-[10px] px-[12px] py-[16px] flex flex-col justify-start gap-[10px] z-10 border border-gray-400 transform transition-transform duration-300 hover:scale-105"
+            >
+              {/* Image */}
+              <div className="w-full h-[160px] rounded-[10px] overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
-          </div>
+
+              {/* Title */}
+              <p
+                className="text-[24px] font-[Lora] text-black "
+                style={{ fontFamily: "Lora" }}
+              >
+                {item.title}
+              </p>
+
+              {/* Description */}
+              <p
+                className="text-[16px] font-[Mulish] text-[#4d4d4d]"
+                style={{ fontFamily: "mulish" }}
+              >
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

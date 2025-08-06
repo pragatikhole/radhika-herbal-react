@@ -29,7 +29,7 @@ const EnquiryForm = () => {
   };
 
   return (
-    <section className="bg-[#7E9E86] w-full py-12">
+    <section className="bg-[#7E9E86] w-full mt-8">
       <div className="max-w-4xl mx-auto bg-[#7E9E86] rounded-xl px-6 py-8 pb-28">
         <h2
           className="text-white text-xl md:text-3xl font-semibold text-center mb-2"
