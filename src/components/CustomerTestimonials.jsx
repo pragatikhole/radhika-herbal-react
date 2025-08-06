@@ -1,6 +1,10 @@
 // src/components/CustomerTestimonials.js
 
 import React from "react";
+import testimonials1 from "../assests/testimonials1.png";
+import testimonials2 from "../assests/testimonials2.png";
+import testimonials3 from "../assests/testimonials3.png"; // ✅ Import your local image
+
 
 // Dummy data for testimonials
 const testimonials = [
@@ -8,7 +12,7 @@ const testimonials = [
         name: "Devon Lane",
         username: "@its_devon",
         rating: 5.0,
-        image: "/assets/FirstCard.jpg",
+        image: testimonials1,
         message:
             "Radhika Herbals helped us launch our private label herbal skincare range seamlessly. Their team was responsive, transparent, and delivered on every promise.",
     },
@@ -16,7 +20,7 @@ const testimonials = [
         name: "Satish Mishra",
         username: "@its_satish",
         rating: 4.9,
-        image: "/assets/SecondCard.jpg",
+        image: testimonials2,
         message:
             "Radhika Herbals helped us launch our private label herbal skincare range seamlessly. Their team was responsive, transparent, and delivered on every promise.",
     },
@@ -24,7 +28,7 @@ const testimonials = [
         name: "Priya Rao",
         username: "@priya_rao",
         rating: 5.0,
-        image: "/assets/ThirdCard.jpg",
+        image: testimonials3, // ✅ Use the imported local image here
         message:
             "Radhika Herbals helped us launch our private label herbal skincare range seamlessly. Their team was responsive, transparent, and delivered on every promise.",
     },
@@ -32,21 +36,22 @@ const testimonials = [
 
 const CustomerTestimonials = () => {
     return (
-        <div className=" font-sans px-44">
+        <div className="font-sans px-44">
             <h2
-                className="text-[28px] text-gray-700 text-left py-10"
+                className="text-[28px] text-gray-700 text-center py-10"
                 style={{ fontFamily: "Lora" }}
             >
                 What Our Customers Say..
             </h2>
 
-            <div className="flex flex-wrap gap-6">
+
+            <div className="flex flex-wrap gap-6 px-10">
                 {testimonials.map((testimonial, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-xl shadow-md p-6 w-full md:w-[30%]"
+                        className="bg-white rounded-xl shadow-md p-6 w-full md:w-[30%] "
                     >
-                        <div className="flex items-center mb-4">
+                        <div className="flex items-center mb-4 ">
                             <img
                                 src={testimonial.image}
                                 alt={testimonial.name}

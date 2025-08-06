@@ -1,44 +1,44 @@
 // src/components/OurServices.js
 
 import React from "react";
+import ourService1 from "../assests/ourService1.png"; // ✅ Import your local image
+import ourService2 from "../assests/ourService2.png";
+import ourService3 from "../assests/ourService3.png"; // ✅ Import your local image
+import ourService4 from "../assests/ourService4.png";
 
 const services = [
   {
     title: "Contract Manufacturing",
-    image:
-      "https://img.freepik.com/free-photo/workers-assembly-line-factory_23-2149343602.jpg",
+    image: ourService1, // ✅ Use local image here
   },
   {
     title: "Corporate Gifting",
-    image:
-      "https://img.freepik.com/free-photo/woman-looking-cosmetic-box_23-2149395257.jpg",
+    image: ourService4, // ✅ Use local image here
   },
   {
     title: "Private Labelling",
-    image:
-      "https://img.freepik.com/free-photo/cosmetic-packaging-set_23-2148430177.jpg",
+    image: ourService2, // ✅ Use local image here
   },
   {
     title: "Product Samples",
-    image:
-      "https://img.freepik.com/free-photo/dropper-bottle-cosmetic-mockup_23-2148824993.jpg",
+    image: ourService3, // ✅ Use local image here
   },
 ];
 
 const OurServices = () => {
   return (
-    <section className="py-4 ">
+    <section className="py-4">
       <h2
         className="text-[28px] text-gray-700 text-center p-10"
         style={{ fontFamily: "Lora" }}
       >
         Our Services
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center  transform transition-transform duration-300  hover:scale-105 hover:border-[#7E9E86]"
+            className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm text-center transform transition-transform duration-300 hover:scale-105 hover:border-[#7E9E86]"
           >
             <img
               src={service.image}
