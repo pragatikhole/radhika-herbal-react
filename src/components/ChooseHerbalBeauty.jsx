@@ -1,27 +1,27 @@
-import ImageSteps from "../assests/slider2.png";
+import Image1 from "../assests/whyChooseHerbalBeauty1.jpeg";
+import Image2 from "../assests/whyChooseHerbalBeauty2.jpeg";
+// import Image3 from "../assests/whyChooseHerbalBeauty3.jpeg";
+import Image4 from "../assests/whyChooseHerbalBeauty4.jpeg";
 
 export default function ChooseHerbalBeauty() {
   const steps = [
     {
-      step: "Step 1",
-      title: "Consultation & Requirements Gathering",
+      title: "Gentle on Skin",
       description:
-        "We understand your brand, product vision, target audience, and compliance needs.",
-      image: ImageSteps, // Your uploaded image
+        "Herbal formulations use plant-based ingredients that are less likely to irritate or cause allergies—perfect for sensitive skin.",
+      image: Image4, // Your uploaded image
     },
     {
-      step: "Step 2",
-      title: "Formulation & Sampling",
+      title: "No Harsh Chemicals",
       description:
-        "Expert teams create precise herbal formulations and provide sample products for your feedback and approval.",
-      image: ImageSteps,
+        "Embrace beauty free from parabens, sulfates, and synthetic fragrances commonly found in traditional cosmetics.",
+      image: Image2,
     },
     {
-      step: "Step 3",
-      title: "Production & Packaging",
+      title: "Rich in Natural Nutrients",
       description:
-        "Once finalized, we move to streamlined production and careful packaging to ensure quality delivery.",
-      image: ImageSteps,
+        "Herbal products deliver vitamins, antioxidants, and essential oils—supporting healthy, radiant skin from within.",
+      image: Image1,
     },
   ];
 
