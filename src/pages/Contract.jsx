@@ -6,6 +6,7 @@ import EnquiryForm from "../components/EnquiryForm";
 import PageContract from "./pageContract";
 import OurProducts from "../components/ourproducts";
 import ProductsGrid from "../components/ProductsGrid";
+import Footer from "../components/foooter";
 
 const Contract = () => {
   const productRef = useRef(null);
@@ -34,6 +35,7 @@ const Contract = () => {
       </div>
 
       <BlogSection />
+      <Footer />
     </div>
   );
 };

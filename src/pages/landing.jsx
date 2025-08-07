@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import womanImg from "../assests/woman.png";
 import { FiSearch } from "react-icons/fi";
+import Logo from "../assests/radhika-logo.png";
 
 // Home page components
 import OurProducts from "../components/ourproducts";
@@ -16,6 +17,8 @@ import ManufacturingProcess from "../components/OurManufacturing";
 import CustomerTestimonials from "../components/CustomerTestimonials";
 import ChooseHerbalBeauty from "../components/ChooseHerbalBeauty";
 import SustainabilityGoals from "../components/SustainabilityGoals";
+import Footer from "../components/foooter";
+import GiftingCard from "../components/giftingcard";
 
 // Other pages
 import About from "./About";
@@ -40,7 +43,7 @@ export default function LandingPage() {
       <nav className="sticky top-0 z-50 bg-[#FEFEFE] text-[#666666] px-4 py-4 shadow">
         <div className="flex flex-wrap items-center justify-between max-w-[1440px] mx-auto w-full">
           <div className="flex items-center gap-6 flex-1 flex-wrap">
-            <div className="text-2xl font-bold">🌿</div>
+            <img src={Logo} alt="Radhika Herbals Logo" className="h-8 w-auto" />
 
             <div className="hidden md:flex gap-6 font-medium">
               <Link to="/" className="hover:underline">
@@ -217,11 +220,12 @@ export default function LandingPage() {
               <ChooseHerbalBeauty />
               <SustainabilityGoals />
               <OurGifiting />
-              <ProductsGrid />
+              <GiftingCard />
               <div ref={enquiryRef}>
                 <EnquiryForm />
               </div>
               <BlogSection />
+              <Footer />
             </>
           }
         />

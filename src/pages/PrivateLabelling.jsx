@@ -6,6 +6,7 @@ import EnquiryForm from "../components/EnquiryForm";
 import PagePrivate from "./PagePrivate";
 import OurProducts from "../components/ourproducts";
 import ProductsGrid from "../components/ProductsGrid";
+import Footer from "../components/foooter";
 
 const PrivateLabelling = () => {
   const enquiryRef = useRef(null);
@@ -34,6 +35,7 @@ const PrivateLabelling = () => {
       </div>
 
       <BlogSection />
+      <Footer />
     </div>
   );
 };
