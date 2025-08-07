@@ -15,7 +15,7 @@ const PageCorporate = ({ scrollToEnquiry, scrollToProduct }) => {
           className="btn-contact bg-olive-dark text-white px-6 py-2 rounded-md font-semibold"
           onClick={scrollToEnquiry}
         >
-          Contact Us
+          Request Quote
         </button>
         <button
           className="btn-view bg-white text-olive-dark px-6 py-2 rounded-md font-semibold border border-gray-300"

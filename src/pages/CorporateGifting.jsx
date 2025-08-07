@@ -6,6 +6,7 @@ import EnquiryForm from "../components/EnquiryForm";
 import PageCorporate from "./PageCorporate";
 import OurProducts from "../components/ourproducts";
 import ProductsGrid from "../components/ProductsGrid";
+import Footer from "../components/foooter";
 
 const CorporateGifting = () => {
   const enquiryRef = useRef(null);
@@ -34,6 +35,7 @@ const CorporateGifting = () => {
       </div>
 
       <BlogSection />
+      <Footer />
     </div>
   );
 };
